@@ -92,16 +92,84 @@ print(slownik)
     #instrukcja
 
 
-a=input('podaj a:')
-b=input('podaj b:')
-a=int(a)
-b=int(b)
-if a>b:
-    print("A wieksze od b")
-elif a<b:
-    print("A mniejsze od b")
+#a=input('podaj a:')
+#b=input('podaj b:')
+#c=input('podaj c:')
+#d=input('podaj d:')
+#a=int(a)
+#b=int(b)
+#c=int(c)
+#d=int(d)
+#if a>b:
+    #print("A wieksze od b")
+#elif a<b:
+    #print("A mniejsze od b")
+#else:
+   #print("Obie liczby sa rowne")
+
+#if(a>b)&(c>d):
+    #print('A wieksze od b i c wieksze od d')
+#else:
+    #print(' A nie jest wieksze od b lub c nie jest wieksze od d')
+
+
+
+#for element in sekwencja:
+    #instrukcja
+#else:
+    #instrukcje po petli
+
+for x in range(1,6,1):
+    print(x)
 else:
-    print("Obie liczby sa rowne")
+    print("koniec petli for")
+
+
+lista=[1,2,3,4,5,6,7,8,8,10]
+
+#for x in lista:
+   # print(x)
+
+#for lista in range(0,11,1):
+   # print(lista)
+
+#while warunek:
+    #instrukcja
+#else:
+    #instrukcja
+
+
+#licznik=0
+#while licznik != len(lista):
+    #print(lista[licznik])
+    #licznik += 1
+
+#liczby =[2,5,6,7,3,4]
+#a=input('podaj a:')
+#a=int(a)
+#licznik=0
+
+#while licznik != len(liczby):
+   # if liczby[licznik]-a == 0:
+        #print(str(a) + '-' + str(liczby[licznik]+' = 0'))
+    #licznik += 1
+
+
+
+liczba = [ 2,2,2,2,4,2,5,6,7,2,1,3 ]
+
+a=2
+i =0
+while i != len(liczba):
+    if liczba[i] == a:
+        liczba.pop(i)
+        i -= 1
+    i +=1
+print(liczba)
+
+
+
+
 
 
 
