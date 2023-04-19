@@ -1,86 +1,145 @@
-import random
-encoding ='utf8'
-#Zadanie1
-plik=open("dane.txt")
+import numpy as np
 
-lista1=[]
-i=0
-for i in range(10):
-    a = random.randint(0, 30)
-    lista1.append(a)
-    i+=1
-lista2=[]
-for j in lista1:
-    lista2.append(j*2)
+a=np.array([10,20,30,40])
+b=np.arange(4)
+print(a)
+print(b)
+print(a+b)
 
-print(lista1)
-print(lista2)
-plik= open('dane.txt','w')
-plik.writelines(str(lista2))
-plik.close()
-
-#zadanie 2
-plik=open("dane.txt","r")
-znaki=plik.read(100)
-linia=plik.readline()
-wiersze=plik.readlines()
-print(znaki)
-#zadanie 3
-with open("text.txt", "r+") as text:
-    text.write("Hello World!!!\nNew World\nOld World")
-with open("text.txt") as text:
-    dane = text.read()
-print(dane)
-
-#zadanie 4
-
-class nazakupy:
-    "Przechowuje chyba liste zakupow"
-    def __init__(self,nazwa_produktu,ilosc,jednostka_miary,cena_jednostkowa):
-        self.nazwa_produktu=nazwa_produktu
-        self.ilosc=ilosc
-        self.jednostka_miary=jednostka_miary
-        self.cena_jednostkowa=cena_jednostkowa
-
-    def wyswietl_produkt(self):
-        print(f"Produkt:{self.nazwa_produktu},ilosc:{self.ilosc},jednostka_miary:{self.jednostka_miary},cena:{self.cena_jednostkowa} zł")
-    def ile_produktu(self):
-        return f"{self.ilosc} {self.jednostka_miary}"
-    def ile_kosztuje(self):
-        return self.ilosc*self.cena_jednostkowa
+print(pow(a,b))
+print(np.sin(a))
+print(np.sin(b))
 
 
-ziemniaki=nazakupy("ziemniaki",3,"kg",2)
-ziemniaki.wyswietl_produkt()
-print(ziemniaki.ile_produktu())
-print(ziemniaki.ile_kosztuje())
+d=np.array([[1,2,3,4],[5,6,7,8],[9,10,11,12]])
+print(d)
+print(d.sum())
+print(d.sum(axis=0))
+print(d.sum(axis=1))
+print(d.cumsum(axis=1))
 
-class ciag:
-    "Klasa do definicji ciagow arytmetycznych"
-    def __init__(self,wyswietl_dane,pobierz_elementy,pobierz_parametry,policz_sume,policz_elementy):
-        self.wyswietl_dane=wyswietl_dane
-        self.pobierz_elementy=pobierz_elementy
-        self.pobierz_parametry=pobierz_parametry
-        self.policz_sume=policz_sume
-        self.policz_elementy=policz_elementy
+a=np.array([[2,1,3],[-1,2,4]])
+b=np.array([[1,3],[2,-2],[-1,4]])
 
-    def wezdajmicos(self):
-        pierwszyelement=input("Podaj 1 element ciagu:")
-        roznica=input("Podaj roznice ciagu:")
-        iloscelementow=input("Podaj ilosc elementow ciagu")
-
-    def suma(self):
-        return (self.wezdajmicos.pierwszyelement*self.wezdajmicos.iloscelementow)/2
+c=np.dot(a,b)
+print(c)
+d=a.dot(b)
+print(d)
 
 
+a=np.arange(6).reshape((3,2))
+print(a)
+for b in a:
+    print(b)
+
+for c in range(0,a.shape[0],1):
+    for d in range(0,a.shape[1]):
+        print(a[c][d])
 
 
+for c in a.flat:
+    print(c)
+
+a=np.arange(6)
+
+print(a)
 
 
+print(a.shape)
+
+b=a.reshape((2,3))
+print(b)
+print(b.shape)
+
+c=a.reshape((3,2))
+print(c)
+print(c.shape)
 
 
+d=a.reshape((6,1))
+print(d)
+print(d.shape)
+
+e=c.ravel()
+print(e)
+print("")
+print(c)
+f=c.T
+print(f)
+print(f.shape)
 
 
+print("")
+print("")
+print("")
+print("")
+print("")
+print("")
 
 
+a=np.array([0,1,2])
 
+b=np.array([0,1,2])
+c=a.dot(b)
+print(c)
+d=a*b
+print(d)
+
+#Zadanie 1
+a=np.array([1,2,3])
+b=np.array([2,3,4])
+c=a.dot(b)
+print(c)
+#Zadanie 2
+print("")
+b=np.array([[1,3,3],[2,-2,3],[-1,4,3]])
+c=np.array([[4,5,6,7],[5,6,7,8],[6,7,8,9],[7,8,9,10]])
+print(b)
+print("")
+print(c)
+
+najmniejsza=np.min(b,axis=1)
+najmniejsza1=np.min(b,axis=0)
+
+print(najmniejsza,najmniejsza1)
+
+najmniejsza=np.min(c,axis=1)
+najmniejsza1=np.min(c,axis=0)
+print(najmniejsza,najmniejsza1)
+print("")
+#Zadanie3
+
+a=np.array([1,2,3])
+b=np.array([2,3,4])
+c=a.dot(b)
+print(c)
+print("")
+#Zadanie4
+a=np.array([1,2,3])
+b=np.array([2.5,3.5,4.5])
+c=a*b
+print(c)
+print("")
+
+#Zadanie 5
+a=np.array([[1,2,3],[2,3,4]])
+print(a)
+a1=np.sin(a)
+print(a1)
+print("")
+#Zadanie 6
+b=np.array([[1,2,3],[2,3,4]])
+print(b)
+b1=np.cos(b)
+print(b1)
+print("")
+#zaadnie 7
+d=a+b
+print(d.sum())
+print("")
+#zadanie 8
+a=np.arange(9).reshape((3,3))
+for b in a:
+    print(b)
+
+#Zadanie 9
